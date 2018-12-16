@@ -1,0 +1,19 @@
+<!––Home page-->
+<!––Google account sign in API-->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="108826580867-esgc4sg64tncplnq2l13o58ap11ki71a.apps.googleusercontent.com">
+
+<!––Sign in button-->
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>
+    //Should display user info, doesn't work yet
+    function onSignIn(googleUser) {
+        let contentToAdd = '';
+        let profile = googleUser.getBasicProfile();
+        contentToAdd += 'Name: ' + profile.getName() + '<br>';
+        contentToAdd += 'Email: ' + profile.getEmail() + '<br>'; // This is null if the 'email' scope is not present.
+        document.getElementById("testContent").innerHTML = contentToAdd;
+    }
+</script>
+
+<div id="testContent"><div>
