@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    db:
+        image: postgres
+    web:
+        build: .
+        command: sh -c "./wait-for-it.sh -t 20 db:5432 -- python3 manage.py migrate --noinput && python3 manage.py collectstatic --noinput && python3 manage.py loaddata data_fixture.json && python3 manage.py runserver 0.0.0.0:8000"
+        volumes:
+            - .:/code
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db

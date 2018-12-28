@@ -1,0 +1,18 @@
+{% block nav %}
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#resnav" aria-controls="resnav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="resnav">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">Community</a>
+                <a class="nav-item nav-link" href="/events">Events</a>
+                <a class="nav-item nav-link" href="/news">News</a>
+                <a class="nav-item nav-link" href="/">Resources</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="/profile"><i class="far fa-user userIcon"></i></a>
+            </div>
+        </div>
+{% endblock %}
