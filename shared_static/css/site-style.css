@@ -1,0 +1,69 @@
+/******** General ********/
+.background {
+    background-color: #f9f9f9;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+/******** Tables ********/
+.table-object-details th {
+    font-weight: 200;
+    background-color: #f9f9f9;
+    width: 11em;
+}
+
+/******** Events ********/
+.no-margin {
+    margin: 0px;
+}
+
+/******** Headings ********/
+
+h1 {
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 1.7em;
+    margin-top: 40px;
+}
+
+/******** Posters ********/
+.scale-img{
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+
+
+/******** Group Colours ********/
+.hall-society {
+    background-color: #f45936;
+}
+
+.rst {
+    background-color: #f4a742;
+}
+
+.mrs {
+    background-color: #171717;
+}
+
+.monash-sport {
+    background-color: #306f2a;
+}
+
+.rst-only {
+    background-color: #ff0000;
+}
