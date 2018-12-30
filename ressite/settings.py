@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'events.apps.EventsConfig',
     'news.apps.NewsConfig',
-    # 'community_and_resources.apps.Community_and_resourcesConfig',
+    'community_and_resources',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
