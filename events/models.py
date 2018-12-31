@@ -25,7 +25,6 @@ class Event(models.Model):
     )
     food_provided = models.BooleanField(
         verbose_name='Food Provided',
-        blank=True,
     )
 
     RST = 'RST'
