@@ -1,0 +1,40 @@
+{% extends "base.html"%}
+
+{% block nav %}
+    {% include "standard_header.html" %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Upcoming events:</h1>
+    {% for event in event_list %}
+        {% if forloop.first %}<div class="row">{% endif %}
+            <div class="col-md-4" style="padding-bottom: 30px;">
+                <div class="card">
+                    {% if event.group_running == 'HS' %}
+                        <div class="padding10 hall-society">
+                    {% elif event.group_running == 'RST' %}
+                        <div class="padding10 rst">
+                    {% elif event.group_running == 'MRS' %}
+                        <div class="padding10 mrs">
+                    {% elif event.group_running == 'MSPT' %}
+                        <div class="padding10 monash-sport">
+                    {% elif event.group_running == 'STO' %}
+                        <div class="padding10 rst-only">
+                    {% else %}
+                        <div class="padding10">
+                    {% endif %}
+                        <img src="{{ event.poster.url }}" class="card-img-top scale-img" alt="{{ event.name }} poster">
+                    </div>
+                    <div class="card-body background">
+                        <h5 class="card-title" href="{% url 'details' event.pk %}">{{ event.name }}</h5>
+                        <p class="card-text">{{ event.start_time_and_date|date:'g:iA l j M Y' }}<br>{{ event.location }}</p>
+                        <a href="{% url 'details' event.pk %}" class="btn btn-outline-dark btn-lg btn-block">Event information</a>
+                    </div>
+                </div>
+            </div>
+    {% if forloop.counter|divisibleby:3 %}</div><div class="row">{% endif %}
+    {% if forloop.last %}</div>{% endif %}
+    {% endfor %}
+    </div>
+{% endblock %}
