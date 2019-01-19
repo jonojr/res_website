@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+
+{% block nav %}
+    {% include "standard_header.html" %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2>RA Tools and resources</h2>
+        <a class="btn btn-primary" href="{% url 'slideshow' %}">Launch Slideshow</a>
+        <a class="btn btn-primary" href="{% url 'slideshow' %}">Manage Tiger Trophy Points</a>
+        <a class="btn btn-primary" href="{% url 'slideshow' %}">Manage Events</a>
+        <a class="btn btn-primary" href="{% url 'slideshow' %}">Manage your RA profile</a>
+    </div>
+{% endblock %}

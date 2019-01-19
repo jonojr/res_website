@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 
 
@@ -50,6 +51,12 @@ class Event(models.Model):
     @property
     def length(self):
         return self.end_time_and_date - self.start_time_and_date
+
+    @property
+    def currently_running(self):
+        now = datetime.datetime.now()
+        return self.start_time_and_date < now <self.end_time_and_date
+
 
     def __str__(self):
         return self.name
