@@ -1,271 +1,254 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "base.html"%}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-      
-  </head>
-  <body style="margin:5px;padding:5px">
-    <div class="card-columns">
-      <div class="card">
-        <div class="card-body">
-        <h5 class="card-tite">Tiger Trophy</h5>
-        <div class="progress">
-          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-          Floor 1: 25pts
-        <div class="progress">
-          <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-          Floor 2: 50pts
-        <br>
-        <div class="progress">
-          <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-          Floor 3: 75pts
-        <br>
-        <div class="progress">
-          <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-          Floor 4: 100pts
-        </div>
-      </div>
-      
-      
-          
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Weekly Events</h5>
-          <table class="table">
-             <tbody>
-              <tr>
-                <td><b>Futsal</b><br>Tuesday 6:30pm</td>
-              </tr>
-              <tr>
-                <td><b>Gardening</b><br>Saturday 11:00am</td>
-              </tr>
-              <tr>
-                <td><b>Mingle and Munch</b><br>Sunday 8:30pm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Groups</h5>
-          <p class="card-text">The links below will take you to Messenger groups at the hall for those with certain interests or areas of study. 
-            Even if you only have a small interest in a certain topic, please join the group and get involved! 
-            Academic groups will be restricted to those in that area of study, please utilise them to help each other learn, organise groups studies, etc.
-            You can also find links to Turner Hall's social media, in case you haven't joined us yet.<p>
-          <div class="card" style="max-height: 400px;overflow-y: auto">
-            <div id="accordion" m="100px">
-                <div class="card-header" id="headingFive">
-                  <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    <h5>Hall</h5>
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+{% block nav %}
+    {% include "standard_header.html" %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="card-columns">
+            <div class="card">
                 <div class="card-body">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Tiger Town Facebook</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">The Jungle Facebook</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">1 East</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">1 West</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">2 East</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">2 West</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">3 East</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">3 West</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">4 East</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">4 West</a></h5>
-                    </div>
-                  </div>
+                <h5 class="card-tite">Tiger Trophy</h5>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-              </div>
+                  Floor 1: 25pts
+                <div class="progress">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                  Floor 2: 50pts
+                <br>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                  Floor 3: 75pts
+                <br>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                  Floor 4: 100pts
+                </div>
             </div>
-            <div id="accordion" m="100px">
-                <div class="card-header" id="headingOne">
-                  <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    <h5>Interest</h5>
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Sport</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Music</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Art</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Video Games</a></h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Weekly Events</h5>
+                <table class="table">
+                 <tbody>
+                  <tr>
+                    <td><b>Futsal</b><br>Tuesday 6:30pm</td>
+                  </tr>
+                  <tr>
+                    <td><b>Gardening</b><br>Saturday 11:00am</td>
+                  </tr>
+                  <tr>
+                    <td><b>Mingle and Munch</b><br>Sunday 8:30pm</td>
+                  </tr>
+                </tbody>
+                </table>
             </div>
-            <div id="accordion" m="100px">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <h5>Academic</h5>
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Arts, humanities and social sciences</a></h5>
+        </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Groups</h5>
+              <p class="card-text">The links below will take you to Messenger groups at the hall for those with certain interests or areas of study.
+                Even if you only have a small interest in a certain topic, please join the group and get involved!
+                Academic groups will be restricted to those in that area of study, please utilise them to help each other learn, organise groups studies, etc.
+                You can also find links to Turner Hall's social media, in case you haven't joined us yet.<p>
+              <div class="card" style="max-height: 400px;overflow-y: auto">
+                <div id="accordion" m="100px">
+                    <div class="card-header" id="headingFive">
+                      <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <h5>Hall</h5>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Tiger Town Facebook</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">The Jungle Facebook</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">1 East</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">1 West</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">2 East</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">2 West</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">3 East</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">3 West</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">4 East</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">4 West</a></h5>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Business</a></h5>
+                </div>
+                <div id="accordion" m="100px">
+                    <div class="card-header" id="headingOne">
+                      <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h5>Interest</h5>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Sport</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Music</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Art</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Video Games</a></h5>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Education</a></h5>
-                    </div>
+                </div>
+                <div id="accordion" m="100px">
+                    <div class="card-header" id="headingTwo">
+                      <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h5>Academic</h5>
+                      </button>
+                    </h5>
                   </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Engineering</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Information technology</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Law</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Music, art, design and architecture</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Medicine</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Nursing and health sciences</a></h5>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title"><a target="_blank" href="#">Science</a></h5>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Arts, humanities and social sciences</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Business</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Education</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Engineering</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Information technology</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Law</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Music, art, design and architecture</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Medicine</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Nursing and health sciences</a></h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="card-title"><a target="_blank" href="#">Science</a></h5>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <p class="card-text">Missed an interest or study area? Let us know in the feedback form!</p>
             </div>
           </div>
-          <p class="card-text">Missed an interest or study area? Let us know in the feedback form!</p>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Images</h5>
+              <p class="card-text">Remember you time at Turner Hall! The link below will bring you to a shared Google Drive which contains a bunch on images from different events throughout the year.<p>
+              <a target="_blank" href="https://drive.google.com/open?id=1i92IYdT2n7L3G-cRitbqipZN9hUKPe3t" class="btn btn-primary">Image Drive</a>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Calendar</h5>
+              <p class="card-text">Get on top of the goings-on at the Hall with the Turner Hall calendar! The link below will take you to a Google Calendar containing all upcoming events.<p>
+              <a target="_blank" href="#" class="btn btn-primary">Google Calendar</a>
+            </div>
+          </div>
+
+
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cooking</h5>
+              <p class="card-text">Cooking for yourself can be hard, so let us help you! The link below goes to a Google Drive containing recipes and cooking advice for you to use.<p>
+              <a target="_blank" href="https://drive.google.com/open?id=12hJkNo1JxtOuflgEgmmaY_YATc7gT_ts" class="btn btn-primary">Cooking Drive</a>
+            </div>
+          </div>
+
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Images</h5>
-          <p class="card-text">Remember you time at Turner Hall! The link below will bring you to a shared Google Drive which contains a bunch on images from different events throughout the year.<p>
-          <a target="_blank" href="https://drive.google.com/open?id=1i92IYdT2n7L3G-cRitbqipZN9hUKPe3t" class="btn btn-primary">Image Drive</a>
-        </div>
-      </div>
-      
-      
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Calendar</h5>
-          <p class="card-text">Get on top of the goings-on at the Hall with the Turner Hall calendar! The link below will take you to a Google Calendar containing all upcoming events.<p>
-          <a target="_blank" href="#" class="btn btn-primary">Google Calendar</a>
-        </div>
-      </div>
-      
-      
-      
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Cooking</h5>
-          <p class="card-text">Cooking for yourself can be hard, so let us help you! The link below goes to a Google Drive containing recipes and cooking advice for you to use.<p>
-          <a target="_blank" href="https://drive.google.com/open?id=12hJkNo1JxtOuflgEgmmaY_YATc7gT_ts" class="btn btn-primary">Cooking Drive</a>
-        </div>
-      </div>
-      
-      
-      
-      
     </div>
-    
-    
-    
-<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  </body>
-</html>
+{% endblock %}
