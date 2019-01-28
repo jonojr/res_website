@@ -7,22 +7,47 @@ fetch(window.location.origin + '/point_results/')
 
 
 function render_full_chart(response) {
-
-    var ctx = document.getElementById("point_detail").getContext('2d');
-    var myLineChart = new Chart(ctx).Line(data);
+    console.log('Rendering')
     var data = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: response.labels,
         datasets: [
             {
-                fillColor: "rgba(220,220,220,0.2)",
-                strokeColor: "rgba(220,220,220,1)",
-                data: [65, 59, 80, 81, 56, 55, 40]
+                label: "First Floor",
+                backgroundColor: "rgba(41, 136, 93, 0.05)",
+                borderColor: "rgb(41, 136, 93)",
+                data: response.first
             },
             {
-                fillColor: "rgba(151,187,205,0.2)",
-                strokeColor: "rgba(151,187,205,1)",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                label: 'Second Floor',
+                backgroundColor: "rgba(44, 92, 126,0.05)",
+                borderColor: "rgb(44, 92, 126)",
+                data: response.second
+            },
+             {
+                label: 'Second Floor',
+                backgroundColor: "rgba(196, 137, 60, 0.05)",
+                borderColor: "rgb(196, 137, 60)",
+                data: response.third
+            },
+             {
+                label: 'Second Floor',
+                backgroundColor: "rgba(196, 97, 60,0.05)",
+                borderColor: "rgb(196, 97, 60)",
+                data: response.fourth
             }
         ]
     };
+    var options = {scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }};
+    var ctx = document.getElementById("point_detail").getContext('2d');
+    var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: options
+});
 }

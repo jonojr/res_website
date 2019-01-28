@@ -8,7 +8,8 @@
 
 {% block body %}
     <div class="container">
-        <canvas id="point_detail" width="100%" height="100%"></canvas>
+        <canvas id="point_detail" class="scale-img"></canvas>
+        <a class="btn btn-outline-primary " href="{% url 'community' %}"><span class="fas fa-long-arrow-alt-left"></span> Back to Community</a>
     </div>
 {% endblock %}
 

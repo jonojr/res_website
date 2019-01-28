@@ -63,8 +63,22 @@ def total_points(request):
 
 
 def point_results(request):
-    data = serializers.serialize("json", Points.objects.all())
-    return JsonResponse(data, safe=False)
+    all_points = Points.objects.all()
+    lables = ['Initial']
+    first = [0]
+    second = [0]
+    third = [0]
+    fourth = [0]
+
+    for point in all_points:
+        lables.append(point.event_name)
+        first.append(first[-1] + point.first_floor)
+        second.append(second[-1] + point.second_floor)
+        third.append(third[-1] + point.third_floor)
+        fourth.append(fourth[-1] + point.fourth_floor)
+
+    data = {'labels': lables, 'first': first, 'second': second, 'third': third, 'fourth': fourth}
+    return JsonResponse(data)
 
 
 def point_detail(request):

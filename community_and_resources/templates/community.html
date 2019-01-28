@@ -8,33 +8,36 @@
 
 {% block body %}
     <div class="container">
-        <div class="card-columns">
+        <div class="row margin10">
+          <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
                 <h5 class="card-tite">Tiger Trophy</h5>
                 <canvas id="myChart" width="400" height="400"></canvas>
-                  <btn class="btn btn-primary" href="">Points Breakdown</btn>
+                  <a class="btn btn-outline-primary btn-lg btn-block" href="{% url 'point_details' %}">Points Breakdown</a>
             </div>
 
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Weekly Events</h5>
-                <table class="table">
-                 <tbody>
-                  <tr>
-                    <td><b>Futsal</b><br>Tuesday 6:30pm</td>
-                  </tr>
-                  <tr>
-                    <td><b>Gardening</b><br>Saturday 11:00am</td>
-                  </tr>
-                  <tr>
-                    <td><b>Mingle and Munch</b><br>Sunday 8:30pm</td>
-                  </tr>
-                </tbody>
-                </table>
-            </div>
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">Weekly Events</h5>
+                  <table class="table">
+                   <tbody>
+                    <tr>
+                      <td><b>Futsal</b><br>Tuesday 6:30pm</td>
+                    </tr>
+                    <tr>
+                      <td><b>Gardening</b><br>Saturday 11:00am</td>
+                    </tr>
+                    <tr>
+                      <td><b>Mingle and Munch</b><br>Sunday 8:30pm</td>
+                    </tr>
+                  </tbody>
+                  </table>
+              </div>
+          </div>
         </div>
-
+          </div>
+            <div class="col-md-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Groups</h5>
@@ -206,7 +209,8 @@
               <p class="card-text">Missed an interest or study area? Let us know in the feedback form!</p>
             </div>
           </div>
-
+              </div>
+          <div class="col-md-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Images</h5>
@@ -235,6 +239,7 @@
           </div>
 
         </div>
+            </div>
     </div>
 {% endblock %}
 {% block scripts %}
