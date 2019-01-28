@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 
 class RST(models.Model):
@@ -72,8 +73,12 @@ class Points(models.Model):
         max_length=255,
         verbose_name='Event Name',
     )
-    event_time = models.TimeField(
+    report_time = models.TimeField(
         verbose_name='Event Time',
+    )
+    reporter = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
     )
     first_floor = models.FloatField(
         verbose_name='1st Floor',
