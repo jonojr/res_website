@@ -8,7 +8,7 @@
     <div class="container">
         <h1 style="text-align: center">{{ event.name}}</h1>
         <div class="row">
-            <div class="col-md-5" >
+            <div class="col-md-5 mb-4" >
                 {% if event.group_running == 'HS' %}
                     <div class="hall-society padding10">
                 {% elif event.group_running == 'RST' %}
@@ -24,7 +24,7 @@
                 </div>
 
             </div>
-            <div class="col-md-7" style="margin-top: 10px;">
+            <div class="col-md-7">
                 <table class="table table-bordered table-object-details">
                     <tr>
                         <th>Start time and date</th>
@@ -56,16 +56,24 @@
                             {% endif %}
                         </td>
                     </tr>
-                    <tr>
-                        <th>Food Provided</th>
-                        <td>
-                            {% if event.food_provided %}
-                                Yes
-                            {% else %}
-                                No
-                            {% endif %}
-                        </td>
-                    </tr>
+                    {% if event.food_provided or event.points_available %}
+                        <tr>
+                            <th>Perks</th>
+                            <td>
+                                {% if event.food_provided %}
+                                    <span class="fas fa-utensils" style="color: black"></span>
+                                {% else %}
+                                    <span class="fas fa-utensils" style="color:#c5c3c3"></span>
+                                {% endif %}
+                                &nbsp;
+                                {% if event.points_available %}
+                                    <span class="fas fa-trophy" style="color: black"></span>
+                                {% else %}
+                                    <span class="fas fa-trophy" style="color:#E4E5E5"></span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endif %}
                     <tr>
                         <th>Event run by</th>
                         <td>
@@ -84,16 +92,16 @@
                     </tr>
                 </table>
                 <div class="row">
-                    <div class="col-md-12 background padding10 margin10">
+                    <div class="col-md-12 background margin10" style="flex:auto; padding:10px; border: 2px; border-color: #000000">
                         <h2 class="no-margin">Event Information:</h2>
                         <p>{{ event.information }}</p>
                     </div>
                     <div class="row padding10" style="width: 100%;">
-                        <div class="col-md-3">
-                            <a href="{% url 'events_index' %}" class="btn btn-primary">Back to events</a>
+                        <div class="col-3">
+                            <a href="{% url 'events_index' %}" class="btn btn-outline-dark">Back to events</a>
                         </div>
-                        <div class="col-md-3 offset-5">
-                            <a href="{{link}}" class="btn btn-primary">Add to google calendar</a>
+                        <div class="col-4 offset-5">
+                            <a href="{{link}}" class="btn btn-outline-dark"><span class="fa fa-calendar" aria-hidden="true"></span> Add to google calendar</a>
                         </div>
                     </div>
                 </div>

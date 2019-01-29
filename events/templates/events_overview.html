@@ -6,9 +6,8 @@
 
 {% block body %}
     <div class="container">
-        <h1>Upcoming events:</h1>
     {% for event in event_list %}
-        {% if forloop.first %}<div class="row">{% endif %}
+        {% if forloop.first %}<div class="row" style="margin-top:30px;">{% endif %}
             <div class="col-md-4" style="padding-bottom: 30px;">
                 <div class="card">
                     {% if event.group_running == 'HS' %}
@@ -29,7 +28,19 @@
                     <div class="card-body background">
                         <h5 class="card-title" href="{% url 'details' event.pk %}">{{ event.name }}</h5>
                         <p class="card-text">{{ event.start_time_and_date|date:'g:iA l j M Y' }}<br>{{ event.location }}</p>
-                        <a href="{% url 'details' event.pk %}" class="btn btn-outline-dark btn-lg btn-block">Event information</a>
+                        {% if event.group_running == 'HS' %}
+                            <a href="{% url 'details' event.pk %}" class="btn hs-btn btn-outline-dark btn-lg btn-block">Event information</a>
+                        {% elif event.group_running == 'RST' %}
+                            <a href="{% url 'details' event.pk %}" class="btn rst-btn btn-outline-dark btn-lg btn-block">Event information</a>
+                        {% elif event.group_running == 'MRS' %}
+                            <a href="{% url 'details' event.pk %}" class="btn mrs-btn btn-outline-dark btn-lg btn-block">Event information</a>
+                        {% elif event.group_running == 'MSPT' %}
+                            <a href="{% url 'details' event.pk %}" class="btn m-sport-btn btn-outline-dark btn-lg btn-block">Event information</a>
+                        {% elif event.group_running == 'STO' %}
+                            <a href="{% url 'details' event.pk %}" class="btn rst-only-btn btn-outline-dark btn-lg btn-block">Event information</a>
+                        {% else %}
+                            <a href="{% url 'details' event.pk %}" class="btn btn-outline-dark btn-lg btn-block">Event information</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

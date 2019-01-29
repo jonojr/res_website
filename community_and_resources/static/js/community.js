@@ -35,11 +35,18 @@ function render_simple_chart(response){
         },
         options: {
             scales: {
-                yAxes: [{
+                xAxes: [{
                     ticks: {
                         beginAtZero:true
                     }
                 }]
+            },
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                    boxWidth: 0,
+                },
             }
         }
     });

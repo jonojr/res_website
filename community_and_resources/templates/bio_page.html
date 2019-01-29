@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block body %}
-  <div class="container">
+  <div class="container mt-2">
     <div class="card-columns">
       <div class="card">
         <img src="{{ person.picture.url }}" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">{{ person.position }}<br>{{ person.name }}</h5>
+          <h5 class="card-title">{{ person.wing }}&nbsp;{{ person.position }}<br>{{ person.name }}</h5>
         </div>
       </div>
       <div class="card">

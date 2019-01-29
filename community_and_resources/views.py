@@ -30,7 +30,7 @@ def resources(request):
     return render(
         request,
         'resources.html',
-        {'rst': rst, 'CH':CH, 'DCH':DCH, 'RSA':RSA,}
+        {'rst': rst, 'CH': CH, 'DCH': DCH, 'RSA': RSA, }
     )
 
 
@@ -64,7 +64,7 @@ def total_points(request):
 
 def point_results(request):
     all_points = Points.objects.all()
-    lables = ['Initial']
+    lables = ['Move In']
     first = [0]
     second = [0]
     third = [0]

@@ -6,13 +6,13 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="container mb-2">
         <div id="accordion">
-            <div class="card" style="margin-top: 15px">
+            <div class="card mt-3 mb-3">
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <h5><span class="fas fa-shield-alt"></span>&emsp;Safety</h5>
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="width: 100%; height: 100%; text-align: left;">
+                      <h5><span class="fas fa-shield-alt pr-3"></span>Safety</h5>
                     </button>
                   </h5>
                 </div>
@@ -65,11 +65,11 @@
                   </div>
                 </div>
             </div>
-              <div class="card">
+              <div class="card mb-3">
                 <div class="card-header" id="headingThree">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      <h5><span class="fas fa-medkit"></span>&emsp;Health and Wellbeing</h5>
+                      <h5><span class="fas fa-medkit pr-3"></span>Health and Wellbeing</h5>
                     </button>
                   </h5>
                 </div>
@@ -84,7 +84,7 @@
                                 <div class="card-body">
                                   <p class="card-text">
                                     Please remember that your RAs and the RSTO are here to give you help and support for any difficulty you may be facing. They will also be able to link you up with support services that may help you.
-                                    <br>Contacts for RAs and the RSTO can be found under RST on this page.
+                                    <br>Contacts for RAs and the RSTO can be found under the RST section further down this page.
                                   </p>
                                 </div>
                             </div>
@@ -136,11 +136,11 @@
                     </div>
                   </div>
                 </div>
-              <div class="card">
+              <div class="card mb-3">
                 <div class="card-header" id="headingFour">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      <h5><span class="fas fa-pencil-alt"></span>&emsp;Forms</h5>
+                      <h5><span class="fas fa-pencil-alt pr-3"></span>Forms</h5>
                     </button>
                   </h5>
                 </div>
@@ -156,11 +156,11 @@
                   </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card mb-3">
                 <div class="card-header" id="headingFive">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      <h5><span class="far fa-question-circle"></span>&emsp;How-To</h5>
+                      <h5><span class="far fa-question-circle pr-3"></span>How-To</h5>
                     </button>
                   </h5>
                 </div>
@@ -176,11 +176,11 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card mb-3">
                 <div class="card-header" id="headingSix">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                      <h5><span class="fas fa-address-book"></span>&emsp;RST</h5>
+                      <h5><span class="fas fa-address-book pr-3"></span>RST</h5>
                     </button>
                   </h5>
                 </div>
@@ -196,7 +196,7 @@
                                         </div>
                                         <div class="card-body background">
                                             <h5 class="card-title" href="{% url 'bio' CH.pk%}">{{ CH.name }}</h5>
-                                            <p class="card-text">{{ CH.wing }}</p>
+                                            <p class="card-text">{% if CH.wing == 'GF' %}Ground Floor{% else %}{{ CH.wing }}{% endif %}</p>
                                             <a href="{% url 'bio' CH.pk%}" class="btn btn-outline-dark btn-lg btn-block">CH information</a>
                                         </div>
                                     </div>

@@ -27,6 +27,10 @@ class Event(models.Model):
     food_provided = models.BooleanField(
         verbose_name='Food Provided',
     )
+    points_available = models.BooleanField(
+        verbose_name='Points Available',
+        default=False,
+    )
 
     RST = 'RST'
     MONASH_SPORT = 'MSPT'
@@ -55,8 +59,7 @@ class Event(models.Model):
     @property
     def currently_running(self):
         now = datetime.datetime.now()
-        return self.start_time_and_date < now <self.end_time_and_date
-
+        return self.start_time_and_date < now < self.end_time_and_date
 
     def __str__(self):
         return self.name

@@ -3,6 +3,10 @@
     background-color: #f9f9f9;
 }
 
+.background_dark {
+    background-color: #e5e5e5;
+}
+
 .padding10 {
     padding: 10px;
 }
@@ -44,26 +48,51 @@ h2 {
     max-width: 100%;
 }
 
-
+/******** Charts ********/
 
 
 /******** Group Colours ********/
 .hall-society {
-    background-color: #f45936;
+    background-color: #27CF9D;
 }
 
 .rst {
-    background-color: #f4a742;
+    background-color: #FF7A70;
 }
 
 .mrs {
-    background-color: #171717;
+    background-color: #5E8A99;
 }
 
 .monash-sport {
-    background-color: #306f2a;
+    background-color: #CC81B7;
 }
 
 .rst-only {
-    background-color: #ff0000;
+    background-color: #CC1241;
+}
+/*** Button Colours ***/
+.hs-btn:hover {
+    background-color: #27CF9D;
+    border-color: #27CF9D;
+}
+
+.rst-btn:hover {
+    background-color: #FF7A70;
+    border-color: #FF7A70;
+}
+
+.mrs-btn:hover {
+    background-color: #5E8A99;
+    border-color: #5E8A99;
+}
+
+.m-sport-btn:hover {
+    background-color: #CC81B7;
+    border-color: #CC81B7;
+}
+
+.rst-only-btn:hover {
+    background-color: #CC1241;
+    border-color: #CC1241;
 }
