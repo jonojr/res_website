@@ -24,13 +24,13 @@ function render_full_chart(response) {
                 data: response.second
             },
              {
-                label: 'Second Floor',
+                label: 'Third Floor',
                 backgroundColor: "rgba(196, 137, 60, 0.05)",
                 borderColor: "rgb(196, 137, 60)",
                 data: response.third
             },
              {
-                label: 'Second Floor',
+                label: 'Fourth Floor',
                 backgroundColor: "rgba(196, 97, 60,0.05)",
                 borderColor: "rgb(196, 97, 60)",
                 data: response.fourth
