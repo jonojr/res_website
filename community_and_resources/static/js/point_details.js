@@ -12,29 +12,53 @@ function render_full_chart(response) {
         labels: response.labels,
         datasets: [
             {
-                label: "First Floor",
-                backgroundColor: "rgba(41, 136, 93, 0.05)",
-                borderColor: "rgb(41, 136, 93)",
-                data: response.first
+                label: "1st East",
+                backgroundColor: 'rgba(255, 203, 63, 0.05)',
+                borderColor: 'rgba(255, 203, 63, 1)',
+                data: response.first_east
             },
             {
-                label: 'Second Floor',
-                backgroundColor: "rgba(44, 92, 126,0.05)",
-                borderColor: "rgb(44, 92, 126)",
-                data: response.second
+                label: '1st West',
+                backgroundColor: 'rgba(255, 178, 72, 0.05)',
+                borderColor: 'rgba(255, 178, 72, 1)',
+                data: response.first_west
             },
              {
-                label: 'Third Floor',
-                backgroundColor: "rgba(196, 137, 60, 0.05)",
-                borderColor: "rgb(196, 137, 60)",
-                data: response.third
+                label: '2nd East',
+                backgroundColor: 'rgba(191, 64, 45, 0.05)',
+                borderColor: 'rgba(191, 64, 45, 1)',
+                data: response.second_east
             },
              {
-                label: 'Fourth Floor',
-                backgroundColor: "rgba(196, 97, 60,0.05)",
-                borderColor: "rgb(196, 97, 60)",
-                data: response.fourth
-            }
+                label: '2nd West',
+                backgroundColor: 'rgba(255, 85, 60, 0.05)',
+                borderColor: 'rgba(255, 85, 60, 1)',
+                data: response.second_west
+            },
+            {
+                label: '3rd East',
+                backgroundColor: 'rgba(42, 191, 39, 0.05)',
+                borderColor: 'rgba(42, 191, 39, 1)',
+                data: response.third_east
+            },
+            {
+                label: '3rd West',
+                backgroundColor: 'rgba(28, 127, 26, 0.05)',
+                borderColor: 'rgba(28, 127, 26, 1)',
+                data: response.third_west
+            },
+            {
+                label: '4th East',
+                backgroundColor: 'rgba(38, 62, 191, 0.05)',
+                borderColor: 'rgba(38, 62, 191, 1)',
+                data: response.fourth_east
+            },
+            {
+                label: '4th West',
+                backgroundColor: 'rgba(50, 82, 255, 0.05)',
+                borderColor: 'rgba(50, 82, 255, 1)',
+                data: response.fourth_west
+            },
         ]
     };
     var options = {scales: {

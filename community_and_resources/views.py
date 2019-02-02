@@ -41,23 +41,36 @@ def bio(request, RST_pk):
 
 def total_points(request):
     all_points = Points.objects.all()
-    first = 0
-    second = 0
-    third = 0
-    fourth = 0
+    first_east = 0
+    first_west = 0
+    second_east = 0
+    second_west = 0
+    third_east = 0
+    third_west = 0
+    fourth_east = 0
+    fourth_west = 0
+
     print('Gathering points')
     for points in all_points:
-        first += points.first_floor
-        second += points.second_floor
-        third += points.third_floor
-        fourth += points.fourth_floor
-    print(first, second, third, fourth)
+        first_east += points.first_east
+        first_west += points.first_west
+        second_east += points.second_east
+        second_west += points.second_west
+        third_east += points.third_east
+        third_west += points.third_west
+        fourth_east += points.fourth_east
+        fourth_west += points.fourth_west
+
     return JsonResponse(
         {
-            'first': first,
-            'second': second,
-            'third': third,
-            'fourth': fourth,
+            'FirstE': first_east,
+            'FirstW': first_west,
+            'SecondE': second_east,
+            'SecondW': second_west,
+            'ThirdE':third_east,
+            'ThirdW':third_west,
+            'FourthE':fourth_east,
+            'FourthW':fourth_west,
          }
     )
 
@@ -65,19 +78,33 @@ def total_points(request):
 def point_results(request):
     all_points = Points.objects.all()
     lables = ['Move In']
-    first = [0]
-    second = [0]
-    third = [0]
-    fourth = [0]
+    first_east = [0]
+    first_west = [0]
+    second_east = [0]
+    second_west = [0]
+    third_east = [0]
+    third_west = [0]
+    fourth_east = [0]
+    fourth_west = [0]
 
     for point in all_points:
         lables.append(point.event_name)
-        first.append(first[-1] + point.first_floor)
-        second.append(second[-1] + point.second_floor)
-        third.append(third[-1] + point.third_floor)
-        fourth.append(fourth[-1] + point.fourth_floor)
+        first_east.append(first_east[-1] + point.first_east)
+        first_west.append(first_west[-1] + point.first_west)
 
-    data = {'labels': lables, 'first': first, 'second': second, 'third': third, 'fourth': fourth}
+        second_east.append(second_east[-1] + point.second_east)
+        second_west.append(second_west[-1] + point.second_west)
+
+        second_east.append(second_east[-1] + point.second_east)
+        second_west.append(second_west[-1] + point.second_west)
+
+        third_east.append(third_east[-1] + point.third_east)
+        third_west.append(third_west[-1] + point.third_west)
+
+        fourth_east.append(fourth_east[-1] + point.fourth_east)
+        fourth_west.append(fourth_west[-1] + point.fourth_west)
+
+    data = {'labels': lables, 'first_east': first_east, 'first_west': first_west, 'second_east': second_east, 'second_west': second_west, 'third_east': third_east, 'third_west': third_west, 'fourth_east': fourth_east, 'fourth_west': fourth_west,}
     return JsonResponse(data)
 
 

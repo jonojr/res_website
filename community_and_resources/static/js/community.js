@@ -14,21 +14,29 @@ function render_simple_chart(response){
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
         data: {
-            labels: ["1st", "2nd", "3rd", "4th",],
+            labels: ["1E", "1W", "2E", "2W", "3E", "3W","4E", "4W",],
             datasets: [{
                 label: 'Points',
-                data: [response.first, response.second, response.third, response.fourth],
+                data: [response.FirstE, response.FirstW, response.SecondE, response.SecondW, response.ThirdE, response.ThirdW, response.FourthE, response.FourthW],
                 backgroundColor: [
-                    'rgba(191, 63, 63, 0.8)',
-                    'rgba(191, 127, 63, 0.8)',
-                    'rgba(63, 63, 191, 0.8)',
-                    'rgba(63, 191, 63, 0.8)',
+                    'rgba(255, 203, 63, 0.8)',
+                    'rgba(255, 178, 72, 0.8)',
+                    'rgba(191, 64, 45, 0.8)',
+                    'rgba(255, 85, 60, 0.8)',
+                    'rgba(42, 191, 39, 0.8)',
+                    'rgba(28, 127, 26, 0.8)',
+                    'rgba(38, 62, 191, 0.8)',
+                    'rgba(50, 82, 255, 0.8)',
                 ],
                 borderColor: [
-                    'rgba(191, 63, 63, 1)',
-                    'rgba(191, 127, 63, 1)',
-                    'rgba(63, 63, 191, 1)',
-                    'rgba(63, 191, 63, 1)',
+                    'rgba(255, 203, 63, 1)',
+                    'rgba(255, 178, 72, 1)',
+                    'rgba(191, 64, 45, 1)',
+                    'rgba(255, 85, 60, 1)',
+                    'rgba(42, 191, 39, 1)',
+                    'rgba(28, 127, 26, 1)',
+                    'rgba(38, 62, 191, 1)',
+                    'rgba(50, 82, 255, 1)',
                 ],
                 borderWidth: 1
             }]

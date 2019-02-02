@@ -80,16 +80,30 @@ class Points(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
-    first_floor = models.FloatField(
-        verbose_name='1st Floor',
+    first_east = models.FloatField(
+        verbose_name='1st East',
     )
-    second_floor = models.FloatField(
-        verbose_name='2nd Floor',
+    first_west = models.FloatField(
+        verbose_name='1st West',
     )
-    third_floor = models.FloatField(
-        verbose_name='3rd Floor',
+    second_east = models.FloatField(
+        verbose_name='2nd East',
     )
-    fourth_floor = models.FloatField(
-        verbose_name='4th Floor',
+    second_west = models.FloatField(
+        verbose_name='2nd West',
+    )
+    third_east = models.FloatField(
+        verbose_name='3rd East',
+    )
+    third_west = models.FloatField(
+        verbose_name='3rd West',
+    )
+    fourth_east = models.FloatField(
+        verbose_name='4th East',
+    )
+    fourth_west = models.FloatField(
+        verbose_name='4th West',
     )
 
+    def __str__(self):
+        return f"{self.event_name} Points"
