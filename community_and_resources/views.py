@@ -1,13 +1,17 @@
-from django.core import serializers
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import RST, Points
 
 
+def login(request):
+    return redirect('/login/google-oauth2/')
+
+@login_required
 def index(request):
     return render(request, 'community_overview.html')
 
-
+@login_required
 def community(request):
     return render(request, 'community.html')
 

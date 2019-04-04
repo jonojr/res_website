@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'community_and_resources.apps.CommunityAndResourcesConfig',
     'tools.apps.ToolsConfig',
+    'social_django',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -65,6 +66,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -105,6 +108,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.open_id.OpenIdAuth',   # for Google authentication
+    'social_core.backends.google.GoogleOpenId',  # for Google authentication
+    'social_core.backends.google.GoogleOAuth2',  # for Google authentication
+    'django.contrib.auth.backends.ModelBackend', # Default
+)
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '22484663323-f4ufp809vjv3f5cv6odihjepd1jlp3n8.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'MnorEZNZMtBsE3KLvow8eIFs'
+
+LOGIN_URL = 'login_redirect'
+LOGIN_REDIRECT_URL = 'community'
+LOGOUT_REDIRECT_URL = 'login_redirect'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

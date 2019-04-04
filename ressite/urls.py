@@ -24,4 +24,6 @@ urlpatterns = [
     path('events/', include('events.urls')),
     path('news/', include('news.urls')),
     path('tools/', include('tools.urls')),
+    path('account/', include('django.contrib.auth.urls')),
+    path('', include('social_django.urls', namespace='social'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
