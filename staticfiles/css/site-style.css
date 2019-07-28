@@ -1,0 +1,98 @@
+/******** General ********/
+.background {
+    background-color: #f9f9f9;
+}
+
+.background_dark {
+    background-color: #e5e5e5;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+/******** Tables ********/
+.table-object-details th {
+    font-weight: 200;
+    background-color: #f9f9f9;
+    width: 11em;
+}
+
+/******** Events ********/
+.no-margin {
+    margin: 0px;
+}
+
+/******** Headings ********/
+
+h1 {
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 1.7em;
+    margin-top: 40px;
+}
+
+/******** Posters ********/
+.scale-img{
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/******** Charts ********/
+
+
+/******** Group Colours ********/
+.hall-society {
+    background-color: #27CF9D;
+}
+
+.rst {
+    background-color: #FF7A70;
+}
+
+.mrs {
+    background-color: #5E8A99;
+}
+
+.monash-sport {
+    background-color: #CC81B7;
+}
+
+.rst-only {
+    background-color: #CC1241;
+}
+/*** Button Colours ***/
+.hs-btn:hover {
+    background-color: #27CF9D;
+    border-color: #27CF9D;
+}
+
+.rst-btn:hover {
+    background-color: #FF7A70;
+    border-color: #FF7A70;
+}
+
+.mrs-btn:hover {
+    background-color: #5E8A99;
+    border-color: #5E8A99;
+}
+
+.m-sport-btn:hover {
+    background-color: #CC81B7;
+    border-color: #CC81B7;
+}
+
+.rst-only-btn:hover {
+    background-color: #CC1241;
+    border-color: #CC1241;
+}
