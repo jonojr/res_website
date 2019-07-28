@@ -1,0 +1,31 @@
+# pull official base image
+FROM python:3.7-alpine
+
+# set work directory
+WORKDIR /usr/src/res_site
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install dependencies (and their dependencies)
+COPY /requirements/base.txt .
+COPY /requirements/production.txt .
+
+RUN apk update \
+    && apk add --virtual build-deps gcc python3-dev musl-dev jpeg-dev  zlib-dev \
+    && apk add postgresql-dev \
+    && apk add libjpeg \
+    && pip install --upgrade pip \
+    && pip install -r production.txt \
+    && apk del build-deps
+
+
+# copy entrypoint-prod.sh
+COPY ./entrypoint.prod.sh /usr/src/res_site/entrypoint.prod.sh
+
+# copy project
+COPY . /usr/src/res_site/
+
+# run entrypoint.prod.sh
+ENTRYPOINT ["/usr/src/res_site/entrypoint.prod.sh"]

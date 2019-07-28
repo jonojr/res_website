@@ -1,5 +1,5 @@
-import datetime
 from django.db import models
+from django.utils import timezone
 
 
 class Event(models.Model):
@@ -58,7 +58,7 @@ class Event(models.Model):
 
     @property
     def currently_running(self):
-        now = datetime.datetime.now()
+        now = timezone.now()
         return self.start_time_and_date < now < self.end_time_and_date
 
     def __str__(self):

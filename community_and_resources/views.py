@@ -1,7 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render, redirect
+from django.utils import timezone
 from .models import RST, Points
+
+from events.models import Event
 
 
 def login(request):
@@ -13,7 +16,8 @@ def index(request):
 
 @login_required
 def community(request):
-    return render(request, 'community.html')
+    next_event = Event.objects.filter(end_time_and_date__gte=timezone.now())[0]
+    return render(request, 'community.html', {'event': next_event})
 
 
 def resources(request):
