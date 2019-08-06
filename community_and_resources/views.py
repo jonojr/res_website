@@ -16,7 +16,10 @@ def index(request):
 
 @login_required
 def community(request):
-    next_event = Event.objects.filter(end_time_and_date__gte=timezone.now())[0]
+    print("Trying to render view")
+    next_event = Event.objects.filter(end_time_and_date__gte=timezone.now())
+    if next_event:
+        next_event = next_event[0]
     return render(request, 'community.html', {'event': next_event})
 
 
