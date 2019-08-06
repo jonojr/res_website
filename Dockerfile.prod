@@ -12,13 +12,13 @@ ENV PYTHONUNBUFFERED 1
 COPY /requirements/base.txt .
 COPY /requirements/production.txt .
 
-RUN apk update \
-    && apk add --virtual build-deps gcc python3-dev musl-dev jpeg-dev  zlib-dev \
-    && apk add postgresql-dev \
-    && apk add libjpeg \
-    && pip install --upgrade pip \
-    && pip install -r production.txt \
-    && apk del build-deps
+RUN apk update
+RUN apk add --virtual build-deps gcc python3-dev musl-dev jpeg-dev  zlib-dev
+RUN apk add postgresql-dev
+RUN apk add libjpeg 
+RUN pip install --upgrade pip    
+RUN pip install -r production.txt
+RUN apk del build-deps
 
 
 # copy entrypoint-prod.sh
